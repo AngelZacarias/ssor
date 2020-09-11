@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +14,6 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route');
+const Route = use('Route')
 
-Route.on('/').render('welcome').as('welcome');
-Route.on('/notfound').render('notfound').as('notfound');
+Route.on('/').render('welcome')
