@@ -1,14 +1,12 @@
 {
-  "name": "cij-platform",
+  "name": "ssor-udg",
   "version": "1.0.0",
   "adonis-version": "4.1.0",
-  "description": "Survey application",
+  "description": "Notes from class",
   "main": "server.js",
   "scripts": {
     "start": "ENV_SILENT='true' node server.js",
-    "migrate": "ENV_SILENT='true' node ace migration:run",
     "rollback": "ENV_SILENT='true' node ace migration:rollback",
-    "seed": "ENV_SILENT='true' node ace seed --files='UserSeeder.js, AreasQuestionsSeeder.js'",
     "pack": "pkg . -t host"
   },
   "pkg": {
@@ -31,7 +29,7 @@
     "adonisjs",
     "adonis-app"
   ],
-  "author": "wolfsquad",
+  "author": "AngelZacarias",
   "license": "GPL-3.0",
   "private": true,
   "dependencies": {
