@@ -1,20 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Hello Adonis</title>
-  {{ style('style') }}
-</head>
-<body>
-  <section>
-    <div class="logo"></div>
-    <div class="title"></div>
-    <div class="subtitle">
-      <p>AdonisJs simplicity will make you feel confident about your code</p>
-      <p>
-        Don't know where to start? Read the <a href="https://adonisjs.com/docs">documentation</a>.
-      </p>
+@layout('layouts.master')
+@section('content')
+<div class="text-center highlight-clean">
+  <div class="intro">
+    <h2 class="text-center">Actividades y Prácticas</h2>
+    <p class="text-center">Luis Angel Zacarias Magaña</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="/files/activity_pencil.svg" alt="Activity" style="width:100%">
+        <div class="container">
+          <h4><b>Actividad 1</b></h4>
+          <p>Examen Diagnostico</p>
+          <a class="btn btn-primary" role="button" href="{{route('notfound')}}">Revisar</a>
+        </div>
+      </div>
     </div>
-  </section>
-</body>
-</html>
+
+    <div class="column">
+      <div class="card">
+        <img src="/files/activity_pencil.svg" alt="Activity" style="width:100%">
+        <div class="container">
+          <h4><b>Actividad 2</b></h4>
+          <p>Introducción a los sistemas operativos de Red</p>
+          <a class="btn btn-primary" role="button" href="{{route('notfound')}}">Revisar</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+@endsection

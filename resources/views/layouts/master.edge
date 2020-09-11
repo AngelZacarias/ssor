@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    @component('components.head')
+    @endcomponent
+    @section('title')
+      <link rel="shortcut icon" href="/files/UdeG.ico"/>
+      <title>Seminario de Sistemas Operativos de Red</title>
+    @endsection
+  </head>
+  <body class="text-justify" style="height: 100%;" id="page-top">
+    <header class="header">
+      @section('header')
+        @include('partials.header')
+      @endsection
+    </header>
+
+    <div class="container">
+      <div class="content">
+        @!section('content')
+      </div>
+      <div class="footer-basic">
+        <footer>
+          <a class="rounded scroll-to-top" href="#page-top"/>
+          @component('components.footer')
+          @endcomponent
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
