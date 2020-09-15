@@ -1,0 +1,101 @@
+@layout('layouts.master')
+@section('content')
+<div
+  class="justify-content-end align-items-end align-content-end"
+  style="height: 100%;"
+>
+  <h1>Actividad 2</h1>
+  <h2>Introducción a un Sistema Operativo de Red</h2>
+  <br>
+  <h4>¿Qué es un SOR?</h4>
+  <p>Son aquellos sistemas que mantienen a dos o mas equpos unidos a traves de algun medio de comunicacion ya sea fisico o no, con el objetivo de poder compartir los diferentes recursos de hardware y software.
+  <br>
+  Los sistemas operativos de red mas ampliamente utilizados son: Novell Netware, LAN Manager, Windows Server, UNIX, Linux, LASNstatic, Li, etc.
+  </p>
+  <h4>Tabla Comparativa de Sistemas Operativos de Red</h4>
+
+  <table id="comparative-table">
+    <tr>
+     <th></th>
+     <th><img class="images-table" src="/files/activity_2_windows.svg" alt="Windows server"/><br>Windows Server 2019</th>
+     <th><img class="images-table" src="/files/activity_2_centos.svg" alt="CentOS"/><br>CentOS 8</th>
+     <th><img class="images-table" src="/files/activity_2_redhat.svg" alt="Red Hat"/><br>RHEL 8</th>
+    </tr>
+    <tr>
+      <th>Fecha de Lanzamiento</th>
+      <td>2 Octubre 2018</td>
+      <td>Finales 2019 - Inicios 2020</td>
+      <td>7 de Mayo 2019</td>
+    </tr>
+    <tr>
+      <th>Tipo de Licencia</th>
+      <td>Microsoft CLUF (EULA) OEM</td>
+      <td>GPL / GNU</td>
+      <td>GPL / GNU</td>
+    </tr>
+    <tr>
+      <th>Sitio Oficial</th>
+      <td><a href="https://www.microsoft.com/es-mx/windows-server" target="_blank">Click aquí</a></td>
+      <td><a href="https://www.centos.org/" target="_blank">Click aquí</a></td>
+      <td><a href="https://www.redhat.com/es/enterprise-linux-8" target="_blank">Click aquí</a></td>
+    </tr>
+    <tr>
+        <th>RAM minima</th>
+        <td>512 MB sin escritorio y 2 GB con escritorio</td>
+        <td>4 GB</td>
+        <td>2 GB</td>
+    </tr>
+    <tr>
+        <th>ROM minimo</th>
+        <td>32 GB</td>
+        <td>20 GB unallocated disk space</td>
+        <td>20 GB</td>
+    </tr>
+    <tr>
+        <th>Plataformas</th>
+        <td>64-bit</td>
+        <td>64-bit x86 or ARM System</td>
+        <td>64-bit x86</td>
+    </tr>
+    <tr>
+        <th>Principales Mejoras</th>
+        <td>
+          <ul>
+            <li>Soporte beta para Kubernetes (Containers)</li>
+            <li>Windows Subsystem for Linux</li>
+            <li>Server Core App Compatibility feature on demand (FOD)</li>
+            <li>Security with Software Defined Networking (SDN)</li>
+            <li>Security with Software Defined Networking (SDN)</li>
+            <li>Servicio de Migración de Almacenamiento</li>
+            <li>Todas las mejoras incorporadas en Windows 10</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>DNF es el nuevo administrador de paquetes, aunque también puedes usar yum.</li>
+            <li>La configuración de red es controlada por Network Manager (nmcli y nmtui).</li>
+            <li>Gestión de contenedores con Podman.</li>
+            <li>Se incluye dos nuevos repositorios de paquetes: BaseOS y AppStream.</li>
+            <li>Disponible Cockpit, una excelente herramienta de administración del servidores</li>
+            <li>Wayland es el servidor gráfico predeterminado.</li>
+            <li>Se sustituye iptables por nftables. Los comandos de iptables son compatibles.</li>
+            <li>Kernel Linux 4.18.</li>
+            <li>PHP 7.2, Python 3.6, Ansible 2.8, VIM 8.0 y Squid 4.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>XFS File system supports copy-on-write of file extents</li>
+            <li>Introducción de Stratis filesystem, Buildah, Podman, y Skopeo</li>
+            <li>La utilidad Yum esta basada en DNF</li>
+            <li>Chrony remplaza NTP.</li>
+            <li>Cockpit es el navegador Web por defecto para la administración del Servidor.</li>
+            <li>Soporte para OpenSSL 1.1.1 & TLS 1.3</li>
+            <li>PHP 7.2</li>
+            <li>iptables es reemplazado por nftables</li>
+          </ul>
+        </td>
+    </tr>
+  </table>
+</div>
+@endsection

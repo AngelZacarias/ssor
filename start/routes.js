@@ -14,6 +14,10 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use('Route');
 
-Route.on('/').render('welcome')
+Route.on('/').render('welcome');
+Route.on('/activity1').render('activity1').as('activity1');
+Route.on('/activity2').render('activity2').as('activity2');
+Route.on('/notfound').render('notfound').as('notfound');
+
