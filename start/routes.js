@@ -20,5 +20,6 @@ Route.on('/').render('welcome');
 Route.on('/activity1').render('activity1').as('activity1');
 Route.on('/activity2').render('activity2').as('activity2');
 Route.on('/activity3').render('activity3').as('activity3');
+Route.on('/activity4').render('activity4').as('activity4');
 Route.on('/notfound').render('notfound').as('notfound');
 
