@@ -1,0 +1,86 @@
+@layout('layouts.master')
+@section('content')
+<div
+  class="justify-content-end align-items-end align-content-end"
+  style="height: 100%;"
+>
+  <h1>Actividad 5</h1>
+  <br>
+  <h4>Arranque del sistema</h4>
+  <p>El arranque de un computador tiene dos fases: <strong>Arranque del hardware y arranque del Sistema operativo</strong>.</p>
+  <p>Actualmente los computadores tienen un programa llamado <strong>Iniciador ROM</strong>, el cual se encarga de iniciar todos los elementos necesarios para que funcione tal y como conocemos a una computadora. Anteriormente esto se hacía de forma manual, el día de hoy este Iniciador se encuentra en un nivel dentro de la memoria ROM de la computadora.</p>
+  <p>Además de este indicador también se contiene un software para el control de Entradas y Salidas del sistema, <strong>la BIOS</strong> <em>(Basic Input-Output System)</em> y es proporcionado por el fabricante.</p>
+  <p>También, dentro de estos bloques se encuentra nuestro Sistema Operativo, y en específico, un software denominado <strong>boot o cargador</strong>, el cual se encarga de leer un programa (nuestro sistema operativo) y almacenarlo en la memoria principal (RAM)</p>
+  <img class="images-activities" src="/files/activity5_1.png" alt="Estructura de la ROM"/>
+  <h5>Arranque de Hardware</h5>
+  <p>Al momento de presionar nuestro botón de encendido de la computadora, se genera una carga eléctrica que pone valores definidos en los registros de la misma, indica el bloque o la dirección inicial de la ROM en el que se encuentra el iniciador y se pone al Microprocesador de manera privilegiada.</p>
+  <p>En general se siguen las siguientes fases:</p>
+  <ol>
+    <li><strong>Comprobación del sistema:</strong> ¿Cuánta memoria tengo?, ¿Qué dispositivos tengo conectados?</li>
+    <li><strong>Lectura y almacenamiento del boot:</strong> se inicia el cargador, este lee y almacena en memoria principal el sistema operativo</li>
+    <li><strong>Boot:</strong> se le da control al programa boot que indicara la dirección de memoria en que lo ha almacenado</li>
+  </ol>
+  <h5>Arranque del sistema operativo</h5>
+  <ol>
+    <li><strong>Comprobación del sistema:</strong> revisión de los directorios del sistema (suele suceder cuando previamente se había apagado de forma incorrecta)</li>
+    <li><strong>Carga del sistema operativo residente</strong></li>
+    <li><strong>Estructuras de información:</strong> se establecen tablas de interrupciones, procesos, de memoria, E/S, de las cuales hará uso el sistema operativo</li>
+    <li><strong>Activación de la MMU:</strong> Se activa la MMU (Memory Management Unit) que es un dispositivo hardware</li>
+    <li><strong>Se habilitan las interrupciones del sistema</strong></li>
+  </ol>
+  <p>
+    En el caso de UNIX, sin embargo, solo se crea un proceso INIT que crea los procesos de inicio y auxiliares, en el cual el primero solicita autenticación (en sistemas multiusuario) y posterior a ello se lanza un proceso Shell con una secuencia de programas a ejecutar.
+  </p>
+  <img class="images-activities" src="/files/activity5_2.png" alt="Sintesis de Fases"/>
+  <h5>Parada del computador</h5>
+  <p>Para que nuestro sistema operativo trabaje de forma rápida, mucha información crítica se encuentra en memoria principal (RAM) y esto implica que para garantizar que no falle, debe de existir un proceso de apagado correcto el cual guarde toda la información importante.</p>
+  <p>En entornos multiusuario se suele notificar a los usuarios que el sistema será apagado (si es que existen interrupciones de procesos importantes).</p>
+  <p>En entornos monousuario suele entrar en un modo de hibernación, el cual hace un copiado rápido de los procesos e información que se tiene en el momento y en el siguiente arranque inicia con ella.</p>
+  <p>En las laptops, por ejemplo, se queda en un modo stand-by o en espera, en el que la batería sigue alimentando a los procesos conservando la memoria intacta.</p>
+
+  <img class="images-activities" src="/files/activity5_3.png" alt="Flujo de interrupciones"/>
+  <h5>Interrupciones</h5>
+  <p>
+    Las interrupciones se ejecutan al ser solicitadas por la unidad de control para así realizar un ciclo de aceptación de la interrupción en el que:
+  </p>
+  <ol>
+    <li>Se salvan algunos registros</li>
+    <li>Se eleva el modo de ejecución</li>
+    <li>Carga un valor nuevo en el contador de programa</li>
+    <li>Inhibe las interrupciones *en algunos computadores.</li>
+  </ol>
+  <p>Se dice que la interrupción es síncrona cuando es consecuencia directa de las instrucciones máquina que se están ejecutando, y, asíncrona en el resto de los casos. Estas se pueden además clasificar en:</p>
+  <h5>Excepciones de hardware síncronas</h5>
+  <dl>
+    <dt>Problemas de ejecución</dt>
+    <dd>-	Operación invalida en la unidad aritmética</dd>
+    <dd>-	División por cero.</dd>
+    <dd>-	Operando no normalizado.</dd>
+    <dd>-	Desbordamiento en el resultado, siendo demasiado grande o demasiado pequeño.</dd>
+    <dd>-	Resultado inexacto en la unidad aritmética.</dd>
+    <dd>-	Dispositivo no existente (p. ej.: no existe coprocesador).</dd>
+    <dd>-	Región de memoria inválida.</dd>
+    <dd>-	Región de memoria privilegiada en modo de ejecución usuario.</dd>
+    <dd>-	Desbordamiento de la pila.</dd>
+    <dd>-	Violación de los límites de memoria asignada.</dd>
+    <dd>-	Error de alineación en acceso a memoria.</dd>
+    <dd>-	Código de operación máquina inválido.</dd>
+    <dd>-	Código de operación máquina privilegiado en modo de ejecución usuario.</dd>
+    <dt>Depuración</dt>
+    <dd>- Punto de ruptura</dd>
+    <dt>Fallo de página</dt>
+  </dl>
+  <h5>Excepciones de hardware asíncronas</h5>
+  <dl>
+    <dd>- Error de paridad en bus.</dd>
+    <dd>- Error de paridad en memoria.</dd>
+    <dd>- Fallo de alimentación.</dd>
+    <dd>- Límite de temperatura excedido</dd>
+  </dl>
+
+  <h4>Fuentes de Referencia</h4>
+  <a href="https://www.cartagena99.com/recursos/alumnos/apuntes/sistemasoperativosupm.pdf" target="_blank">Sistemas Operativos - Universidad Politécnica de Madrid</a>
+  <br>
+  <a href="https://es.wikipedia.org/wiki/Unidad_de_gesti%C3%B3n_de_memoria" target="_blank">Unidad de Gestión de Memoria</a>
+</div>
+@endsection
