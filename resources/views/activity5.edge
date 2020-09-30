@@ -11,7 +11,7 @@
   <p>Actualmente los computadores tienen un programa llamado <strong>Iniciador ROM</strong>, el cual se encarga de iniciar todos los elementos necesarios para que funcione tal y como conocemos a una computadora. Anteriormente esto se hacía de forma manual, el día de hoy este Iniciador se encuentra en un nivel dentro de la memoria ROM de la computadora.</p>
   <p>Además de este indicador también se contiene un software para el control de Entradas y Salidas del sistema, <strong>la BIOS</strong> <em>(Basic Input-Output System)</em> y es proporcionado por el fabricante.</p>
   <p>También, dentro de estos bloques se encuentra nuestro Sistema Operativo, y en específico, un software denominado <strong>boot o cargador</strong>, el cual se encarga de leer un programa (nuestro sistema operativo) y almacenarlo en la memoria principal (RAM)</p>
-  <img class="images-activities" src="/files/activity5_1.png" alt="Estructura de la ROM"/>
+  <img class="images-activities" src="/files/activity5_1.PNG" alt="Estructura de la ROM"/>
   <h5>Arranque de Hardware</h5>
   <p>Al momento de presionar nuestro botón de encendido de la computadora, se genera una carga eléctrica que pone valores definidos en los registros de la misma, indica el bloque o la dirección inicial de la ROM en el que se encuentra el iniciador y se pone al Microprocesador de manera privilegiada.</p>
   <p>En general se siguen las siguientes fases:</p>
@@ -31,14 +31,14 @@
   <p>
     En el caso de UNIX, sin embargo, solo se crea un proceso INIT que crea los procesos de inicio y auxiliares, en el cual el primero solicita autenticación (en sistemas multiusuario) y posterior a ello se lanza un proceso Shell con una secuencia de programas a ejecutar.
   </p>
-  <img class="images-activities" src="/files/activity5_2.png" alt="Sintesis de Fases"/>
+  <img class="images-activities" src="/files/activity5_2.PNG" alt="Sintesis de Fases"/>
   <h5>Parada del computador</h5>
   <p>Para que nuestro sistema operativo trabaje de forma rápida, mucha información crítica se encuentra en memoria principal (RAM) y esto implica que para garantizar que no falle, debe de existir un proceso de apagado correcto el cual guarde toda la información importante.</p>
   <p>En entornos multiusuario se suele notificar a los usuarios que el sistema será apagado (si es que existen interrupciones de procesos importantes).</p>
   <p>En entornos monousuario suele entrar en un modo de hibernación, el cual hace un copiado rápido de los procesos e información que se tiene en el momento y en el siguiente arranque inicia con ella.</p>
   <p>En las laptops, por ejemplo, se queda en un modo stand-by o en espera, en el que la batería sigue alimentando a los procesos conservando la memoria intacta.</p>
 
-  <img class="images-activities" src="/files/activity5_3.png" alt="Flujo de interrupciones"/>
+  <img class="images-activities" src="/files/activity5_3.PNG" alt="Flujo de interrupciones"/>
   <h5>Interrupciones</h5>
   <p>
     Las interrupciones se ejecutan al ser solicitadas por la unidad de control para así realizar un ciclo de aceptación de la interrupción en el que:
