@@ -1,0 +1,55 @@
+@layout('layouts.master')
+@section('content')
+<div
+  class="justify-content-end align-items-end align-content-end"
+  style="height: 100%;"
+>
+  <h1>Actividad 6</h1>
+  <h2>Servicio de Directorio y Dominio</h2>
+  <br>
+  <h4>¿Qué es un Dominio?</h4>
+  <p>Es una agrupación de equipos y usuarios que facilita la administración de los equipos y cuentas de usuario</p>
+  <p>En estos dominios se almacena de forma centralizada información administrativa (cuentas de usuarios, impresoras, directorios, etc.) y de seguridad, facilitando así la labor del administrador.</p>
+  <h4>¿Que es un Directorio Activo?</h4>
+  <p>Un AD es el servicio de directorio de una red con Windows Server, la cual determina la utilización de recursos de Red de forma centralizada.</p>
+  <h4>¿Qué es un Controlador de Dominio?</h4>
+  <p>Es un Servidor Windows Server con AD instalado. En el equipo se almacena, mantiene y gestiona la base de datos de usuarios y recursos de la red.</p>
+  <h4>Objetos que se pueden administrar en un dominio</h4>
+  <p>Los objetos que administra un dominio son: organizaciones, unidades organizativas, grupos, usuarios, equipos. También, puede gestionar servicios.</p>
+  <h5>Usuarios Globales</h5>
+  <p>Los controladores de dominios suelen venir, predeterminados, con un conjunto determinado de usuarios calificados como globales, como los administradores.</p>
+  <p>El usuario administrador del AD (Active Directory) es el encargado de gestionar todo el árbol del directorio. Esto es, crear objetos como grupos, usuarios, etc.; asignar recursos y derechos y privilegios de éstos, los recursos, a los distintos grupos y usuarios. También tiene asignado tareas de mantenimiento del servidor. También podremos observar un usuario, invitado, que aparece por defecto deshabilitado.</p>
+  <h5>Grupos</h5>
+  <p>Para los grupos hay un conjunto de grupos predeterminados con una serie de funciones, privilegios y derechos. Estos son:</p>
+  <ul>
+    <li><strong>Grupos locales del dominio:</strong> Sólo son visibles en el dominio en que se crean, y suelen utilizarse para conceder permisos y derechos en cualquiera de los ordenadores del dominio</li>
+    <li><strong>Grupos globales:</strong> Son visibles en todos los dominios del bosque, y suelen utilizarse para clasificar a los usuarios en función de las labores que realizan.</li>
+    <li><strong>Grupos universales:</strong> Sólo están disponibles en dominios en modo nativo. Pueden contener cuentas de usuario y grupos globales, así como otros grupos universales, de cualquier dominio del bosque. Son visibles en todo el bosque.</li>
+  </ul>
+  <h5>Otros Objetos</h5>
+  <p>Dentro de los otros objetos que se pueden gestionar en un AD uno importante son los equipos que se conectan con el servidor.</p>
+  <p>Este apartado tiene información de todos los equipos cliente que han sido dados de alta en el sistema. El sistema necesita saber quién ha entrado, con qué credenciales y desde dónde. Es decir, debe existir una relación de confianza a nivel cliente/servidor.</p>
+  <h4>Aplicación</h4>
+  <img class="images-activities" src="/files/activity6/a1.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a2.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a3.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a4.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a5.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a6.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a7.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a8.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a9.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a10.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a11.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a12.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a13.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a14.png" alt="Controlador de Dominio"/>
+  <img class="images-activities" src="/files/activity6/a15.png" alt="Controlador de Dominio"/>
+  <h4>Referencias</h4>
+  <br><a href="https://www.mheducation.es/bcv/guide/capitulo/8448183940.pdf" target="_blank">Controladores de dominios en redes Windows</a>
+  <br><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ASO/ASO03/es_ASIR_ASO03_Contenidos/website_9_objetos_que_administra_un_dominio.html" target="_blank">Objetos que administran un dominio</a>
+  <br><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ASO/ASO03/es_ASIR_ASO03_Contenidos/website_91_usuarios_globales.html" target="_blank">Usuarios Globales</a>
+  <br><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ASO/ASO03/es_ASIR_ASO03_Contenidos/website_92_grupos.html" target="_blank">Grupos</a>
+  <br><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ASO/ASO03/es_ASIR_ASO03_Contenidos/website_93_otros.html" target="_blank">Otros</a>
+</div>
+@endsection
