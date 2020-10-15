@@ -6,7 +6,7 @@ package-lock.json
 tmp
 
 # The development sqlite file
-database/*.sqlite
+#database/*.sqlite
 
 # VSCode & Webstorm history directories
 .history
