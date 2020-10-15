@@ -1,0 +1,123 @@
+@layout('layouts.master')
+@section('content')
+<div
+  class="justify-content-end align-items-end align-content-end"
+  style="height: 100%;"
+>
+  @if(old('type') && old('type') == 'info')
+  <div class="alert alert-info">
+    {{old('message')}}
+  </div>
+  @endif
+  <h1>Actividad 7</h1>
+  <h2>Utilización de herramientas para la administración de dominio</h2>
+  <br>
+  <h4>¿Qué es el Active Directory?</h4>
+  <p>Active Directory (AD) es una caracteristica de servidores de Microsoft Windows y es un servicio avanzado de directorio de red jerárquico. Fue introducido por primera vez en Windows 2000 y permite a sus usuarios administrar permisos y acceder a recursos de red.</p>
+  <p>En conjunto, Active Directory se utiliza para el almacenamiento y la gestión de datos, ofrece mecanismos de autenticación y autorización y proporciona un marco para la implementación de otros servicios relacionados.</p>
+
+  <h4>Problematica</h4>
+  <ul>
+    <li>Configurar y administrar una red grande de forma manual requiere mucho tiempo y esfuerzo y los errores pueden llegar a ser inevitables.</li>
+    <li>Realizar estas tareas a través de PowerShell o tecnología nativa requiere un conocimiento profundo de la administración de Active Directory y las tecnologías complejas y avanzadas relacionadas.</li>
+  </ul>
+  <h4>Herramientas para su administración</h4>
+  <p>Una herramienta de administración de Active Directory generalmente estan diseñadas para:</p>
+  <ul>
+    <li><strong>La administración de Usuarios de Active Directory</strong></li>
+    <li><strong>La gestión de Grupos de Active Directory</strong></li>
+    <li><strong>La administración de Equipos de Active Directory</strong></li>
+    <li><strong>La administración de Permisos de Archivos de Active Directory</strong></li>
+    <li><strong>La gestión de Contactos de Active Directory</strong></li>
+    <li><strong>La administración de Contraseñas de Active Directory</strong></li>
+    <li><strong>Los informes de Active Directory </strong></li>
+  </ul>
+  <p>Existen diferentes herramientas nativas y algunas de estas son:</p>
+  <h5>PowerShell</h5>
+  <p>Es una linea de comandos y lenguaje Script.</p>
+  <p>Existe un modulo llamado ActiveDirectory diseñado para ayudar en la administración de los dominios de Active Directory, los conjuntos de configuración de Active Directory Lightweight Directory Services y las instancias de la herramienta de montaje de bases de datos de Active Directory en un único paquete independiente.</p>
+  <img class="images-activities" src="/files/activity7/6.png" alt="Editor ADSI Active Directory"/>
+  <h5>Centro de administración de Active Directory</h5>
+  <p>Existe a partir de Windows Server 2008 R2. Fue basado en la tecnologia PowerShell de Windows pero proporcionando una experiencia mejorada al tener una interfaz gráfica.</p>
+  <p>Las tareas que se pueden realizar en esta herramienta son:</p>
+  <ul>
+    <li>Crear nuevas cuentas de usuario o administrar las cuentas de usuario existentes</li>
+    <li>Crear grupos nuevos o administrar los grupos existentes</li>
+    <li>Crear nuevas cuentas de equipo o administrar las cuentas de equipo existentes</li>
+    <li>Crear nuevos contenedores y unidades organizativas (OU) o administrar las OU existentes</li>
+    <li>Conectar uno o varios dominios o controladores de dominio en la misma instancia del Centro de administración de Active Directory, y ver o administrar la información de directorio de dichos dominios o controladores de dominio</li>
+    <li>Filtrar datos de Active Directory con la función de búsqueda mediante generación de consultas</li>
+  </ul>
+  <img class="images-activities" src="/files/activity7/5.png" alt="Editor ADSI Active Directory"/>
+  <h5>Usuarios y equipos de Active Directory</h5>
+  <p>Es un complemento de Microsoft Management Console (MMC) que se puede usar para administrar y publicar información en el directorio. Con ella se puede</p>
+  <ul>
+    <li>Delegar el control de tareas a usuarios y grupos.</li>
+    <li>Crear una cuenta de controlador de dominio de solo lectura RODC.</li>
+    <li>Administrar usuarios, equipos, contactos, grupos, recursos, etc.</li>
+    <li>Transferir maestros de operaciones a nivel de dominios.</li>
+  </ul>
+  <img class="images-activities" src="/files/activity7/1.png" alt="Usuarios y Equipos Active Directory"/>
+  <h5>Sitios y Servicios de Active Directory</h5>
+  <p>Es un complemento de Microsoft Management Console (MMC) en Windows Server 2012R2 para la administración la replicación de los datos de directorio entre todos los sitios de un bosque de los Servicios de dominio de Active Directory AD DS.</p>
+  <ul>
+    <li>Administrar Sitios</li>
+    <li>Administrar Subredes</li>
+    <li>Administrar Servidores</li>
+    <li>Administrar Configuraciones NTDS</li>
+    <li>Administrar Conexiones</li>
+    <li>Administrar Vínculos a Sitios</li>
+    <li>Administrar Transportes entre Sitios IP y SMTP</li>
+    <li>Publicación de Servicios</li>
+    <li>Referencias Adicionales</li>
+  </ul>
+  <img class="images-activities" src="/files/activity7/2.png" alt="Sitios y servicios Active Directory"/>
+  <h5>Dominios y confianzas de Active Directory</h5>
+  <p>Es el complemento Microsoft Management Console (MMC) que puede usar para administrar confianzas de dominios, niveles funcionales del bosque o del dominio, y sufijos de nombre principal de usuario UPN.</p>
+  <img class="images-activities" src="/files/activity7/3.png" alt="Dominios y confianza Active Directory"/>
+  <h5>Editor ADSI</h5>
+  <p>Es complement de Microsoft Management Console (MMC) para la administración general de los Servicios de directorio ligero de Active Directory (AD LDS). Es capaz de administrar contenedores y objetos de la instancia.</p>
+  <img class="images-activities" src="/files/activity7/4.png" alt="Editor ADSI Active Directory"/>
+  <h4>Opciones no nativas</h4>
+  <p>Aun y cuando el mismo sistema operativo cuenta con sus herramientas nativas, como es normal, existen herramientas no nativas desarrolladas por terceros que suelen ser comerciales. algunas de las suites son:</p>
+  <ul>
+    <li><a href="https://www.quest.com/mx-es/products/active-administrator/" target="_blank">Quest</a></li>
+    <li><a href="https://www.manageengine.com/latam/herramientas-para-windows-active-directory.html" target="_blank">Manage Engine</a></li>
+    <li><a href="https://www.network-inventory-advisor.com/es/" target="_blank">Network Inventory</a></li>
+  </ul>
+  <h4>Referencias</h4>
+  <ul>
+    <li>ClearApps. (2020, Octubre 13). Herramienta de administración de Active Directory. Retrieved from <a href="https://www.network-inventory-advisor.com/es/active-directory-management-tools.html" target="_blank">https://www.network-inventory-advisor.com/es/active-directory-management-tools.html</a></li>
+    <li>Microsoft. (2020, Octubre 13). Description of Remote Server Administration Tools. Retrieved from <a href="https://docs.microsoft.com/en-us/troubleshoot/windows-client/remote/description-remote-server-administration-tools" target="_blank">https://docs.microsoft.com/en-us/troubleshoot/windows-client/remote/description-remote-server-administration-tools</a></li>
+    <li>Unknown. (2020, Octubre 13). HERRAMIENTAS PARA LA ADMINISTRACIÓN DE ACTIVE DIRECTORY. Retrieved from <a href="https://administracionsistemasoperativos201415.wordpress.com/2015/02/26/herramientas-para-la-administracion-de-active-directory/" target="_blank">https://administracionsistemasoperativos201415.wordpress.com/2015/02/26/herramientas-para-la-administracion-de-active-directory/</a></li>
+  </ul>
+</div>
+<div class="simple-cointainer">
+  {{csrfField()}}
+  <h4>Comentarios</h4>
+  <br>
+  @each(comment in comments)
+  <header class="entry-post">
+    <h5>{{comment.fullName}}:</h5>
+  </header>
+  <div class="entry-post-comment">
+    <p>{{comment.studentComment}}</p>
+  </div>
+  @endeach
+</div>
+<div class="simple-cointainer">
+  <h4>¡Ingresa tus comentarios!</h4>
+  <form method="POST" action="{{route('registerCommentAct7')}}">
+    {{ csrfField()}}
+    <div class="form-group">
+      <label for="fullName">Nombre: </label>
+      <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Ingresa tu nombre completo" maxlength="100" required>
+    </div>
+    <div class="form-group">
+      <label for="studentComment">Comentarios:</label>
+      <textarea class="form-control" id="studentComment" name="studentComment" rows="5" maxlength="300" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-info btn-lg btn-block">Enviar mi Comentario</button>
+  </form>
+</div>
+@endsection
