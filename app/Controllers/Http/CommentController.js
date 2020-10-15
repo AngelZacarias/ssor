@@ -18,13 +18,14 @@ class CommentController {
       type: 'info',
       message: 'Comentario Realizado'
     });
-    response.route('Activity7', {});
+    response.route('activity7', {});
+
   }
 
   async getComments({view}){
     const comments = await Comment.all();
     const myComments = comments.toJSON();
-    return view.render('Activity7',{comments: myComments});
+    return view.render('activity7',{comments: myComments});
   }
 }
 
