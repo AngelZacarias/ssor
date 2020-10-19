@@ -1,0 +1,110 @@
+@layout('layouts.master')
+@section('content')
+<div
+  class="justify-content-end align-items-end align-content-end"
+  style="height: 100%;"
+>
+  <h1>Actividad 8</h1>
+  <h2>Usuarios y Grupos en Red</h2>
+  <br>
+  <p>*En esta entrada del sitio se estará hablando respecto a la tematica orientada a Windows Server en su versión 2012 y 2016 como puntos de referencia.</p>
+  <h4>¿Qué es un Usuario y grupo de Red?</h4>
+  <p>Windows en general es un sistema operativo multiusuario, en su versión para servidor dispone de cuentas de acceso local para acceder por la red desde el propio servidor o global a un ordenador estación de trabajo o terminal. Esto es en realidad una identificación asignada de manera única a un usuario para que le otorga diferente permisos, como:</p>
+  <ul>
+    <li><strong>Iniciar sesión en un dominio</strong></li>
+    <li><strong>Iniciar sesión en un equipo local</strong></li>
+  </ul>
+  <p>Una forma sencilla de administrar los permisos de muchos usuarios es a traves de la creación de grupos de usuarios que compartan el mismo perfil, es decir, los mismos permisos y derechos.</p>
+  <p>Existen dos tipos diferentes de grupos:</p>
+  <ul>
+    <li><strong>Grupos Locales:</strong> Ayudan para otorgar permisos para recursos en la red, conceden privilegios para gestionar tareas.</li>
+    <li><strong>Grupos Globales:</strong> Se usan para organizar las cuentas de usuario de domino, asi como para acceso a recursos de otros dominios.</li>
+  </ul>
+  <p>Mientras no se defina un dominio todas las cuentas administrador se consideraran locales.</p>
+  <h4>¿Qué es un Permiso y un Derecho?</h4>
+  <p>En un sistema operativo, un administrador es aquel que gestiona la seguridad de acceso a recursos y servicios compartidos. El autorizar que acciones podrán hacer los usuarios
+  al momento de entrar al sistema es conocido como un derecho. El atribuirles recursos compartidos u operaciones que podran hacer como leer, modificar, o borrar seran los permisos asignados.</p>
+  <p>Cada recurso dispondrá de un listado con los permisos que tiene cada usuario y grupos sobre él. Cada servidor dispone de diferentes niveles de permisos sobre ficheros y carpetas dependiendo de la posibilidad que ofrezca el sistema de ficheros utilizado (FAT, NTFS, EXT3, etc.).</p>
+  <h4>Administracion de cuentas de usuario locales</h4>
+  <h5>Creación</h5>
+  <ol>
+  <li>Seleccionar la carpeta Usuarios en menú Inicio-Administrador del servidor-Herramientas-Administración de Equipos- Usuarios y grupos locales, en el panel central</li>
+  <li>Verificar si estan deshabilitados por defecto con la flecha hacia abajo.</li>
+  <li>Hacer click en Usuario nuevo deñ menu contextual en la zona blanca del panel y llenar los formularios.</li>
+  </ol>
+  <h5>Baja</h5>
+  <ol>
+  <li>Seleccionar la carpeta Usuarios en menú Inicio-Administrador del servidor-Herramientas-Administración de Equipos- Usuarios y grupos locales, en el panel central</li>
+  <li>En la lista seleccionar el usuario abrir el menu contextual y hacer click en Eliminar y confirmar con sus debidas precauciones.</li>
+  </ol>
+  <h5>Modificación</h5>
+  <ol>
+  <li>Seleccionar la carpeta Usuarios en menú Inicio-Administrador del servidor-Herramientas-Administración de Equipos- Usuarios y grupos locales, en el panel central</li>
+  <li>En la lista seleccionar el usuario abrir el menu contextual y hacer click en propiedades, lo cual mostrara las pestañas para su edición.</li>
+  </ol>
+  <h5>Grupos de Usuarios Locales</h5>
+  <p>Si deseamos gestionar el alta de un grupo local debemos realizar los siguientes pasos:</p>
+  <ol>
+    <li>Desde el menú Inicio-Administrador del servidor-Herramientas-Administración de Equipos- Usuarios y grupos locales, en el panel central debemos seleccionar la carpeta  Grupos</li>
+    <li>Dar el botón derecho del ratón desde zona blanca del panel central, del menú seleccionar Grupo nuevo. Del formulario completar los campos y clic en el botón Crear.</li>
+  </ol>
+  <p>Para añadir el usuario a un grupo:</p>
+  <ol>
+    <li>seleccionamos el grupo y hacemos click derecho para pulsar en Agregar a grupo</li>
+    <li>Hacer click en Opciones Avanzadas, Ubicación, esto buscara los grupos.</li>
+    <li>Seleccionamos el grupo al que queremos pertenecer  y Aceptamos</li>
+  </ol>
+  <p>Para eliminar seguir los pasos 1 a 2 y en el tres hacer click en Quitar.</p>
+  <br>
+  <p>También es posible agregar un usuario a un grupo desde la consola de línea de comandos abriendo la ventana del símbolo del sistema, desde Inicio, en el campo de buscar escribir cmd. Ejecutar la orden:</p>
+  <div class="container">
+    <p><em>net localgroup "nombre_grupo" "nombre_usuario" /add</em></p>
+  </div>
+  <p>Los derechos y permisos asignados a un grupo se asignan a todos sus miembros.</p>
+  <p>Para dar de baja un grupo:</p>
+  <ol>
+    <li>Acceder  la carpeta grupos</li>
+    <li>Seleccionar el grupo a borrar y pulsar el botón derecho del ratón, hacer clic en la opción Eliminar.</li>
+  </ol>
+  <p>Estos grupos eliminados son irrecuperables, mas no elimina las cuentas de usuario, de equipo o las de grupo.</p>
+  <p>Desde la linea de comandos:</p>
+  <div class="container">
+    <p><em>net localgroup "nombre_grupo" /delete</em></p>
+  </div>
+  <p>Para identificar miembros de un grupo local:</p>
+  <ol>
+    <li>Acceder nuevamente a la carpeta de Grupos</li>
+    <li>Seleccionar un grupo y abrir las propiedades. Aquí se puede quitar o agregar usuarios también.</li>
+  </ol>
+  <p>Para identificar un usuario desde la linea de comandos:</p>
+  <div class="container">
+    <p><em>net localgroup "nombre_del_grupo"</em></p>
+  </div>
+  <br>
+  <br>
+  <p>*En Windows Server 2016 ademas, se puede controlar de manera muy similar que en Windows 10 a traves del panel de usuario.</p>
+  <h4>Galeria de Imagenes</h4>
+  <div clas="container">
+    <a class="example-image-link" href="files/activity8/act8_1.png" data-lightbox="example-set" data-title="Ventanas para compartir con permisos"><img class="example-image" src="files/activity8/act8_1.png" alt="Ventana para compartir con permisos en Windows"/></a>
+    <a class="example-image-link" href="files/activity8/act8_2.png" data-lightbox="example-set" data-title="Configuraciones avanzadas para grupos."><img class="example-image" src="files/activity8/act8_2.png" alt="Configuraciones avanzadas para grupos" /></a>
+    <a class="example-image-link" href="files/activity8/act8_3.png" data-lightbox="example-set" data-title="Permisos avanzados para grupos."><img class="example-image" src="files/activity8/act8_3.png" alt="Permisos avanzados para grupos." /></a>
+    <a class="example-image-link" href="files/activity8/act8_4.png" data-lightbox="example-set" data-title="Ventana de Usuarios y Equipos."><img class="example-image" src="files/activity8/act8_4.png" alt="Usuarios y Equipos" /></a>
+    <br><br><p><em>**Haz click en una imagen para verla en tamaño completo y leer su título</em></p>
+  </div>
+  <br>
+  <h4>Conclusiones</h4>
+  <p>Creo que en realidad en base a lo que estuve investigando y viendo en distintos foros la administracion de usuarios y de sus permisos es algo bastante mas fácil en comparación a la de Active Directory. También creo que en especifico en las versiones que vi si estan realmente muy similares a un manejo normal en windows 10 y unas versiones anteriores, por lo que si en realidad ya haz hecho algo relacionado con los permisos de por ejemplo compartir una carpeta o archivo creo que es bastante facil de aterrizar en base a tu experiencia.</p>
+  <h4>Referencias</h4>
+  <div class="flex-parent">
+    <div class="flex-child long-and-truncated">
+      <ul>
+        <li><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO04/es_ASIR_ISO04_Contenidos/website_12_administracin_de_usuarios_en_windows_server_2016.html" target="_blank">BIRTHLH. (2020, Octuber 19). 1.2.- Administración de usuarios en Windows Server 2016. Retrieved from https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO04/es_ASIR_ISO04_Contenidos/website_12_administracin_de_usuarios_en_windows_server_2016.html</a></li>
+        <li><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO04/es_ASIR_ISO04_Contenidos/website_121_configuracin_de_usuarios__locales.html" target="_blank">BIRTHLH. (2020, Octuber 19). Gestión de usuarios y grupos desde el Panel de control. Retrieved from https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO04/es_ASIR_ISO04_Contenidos/website_123_gestin_de_usuarios_y_grupos_desde_el_panel_de_control.html</a></li>
+        <li><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO04/es_ASIR_ISO04_Contenidos/website_123_gestin_de_usuarios_y_grupos_desde_el_panel_de_control.html" target="_blank">BIRTHLH. (2020, Octuber 19). Configuración de usuarios locales. Retrieved from https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO04/es_ASIR_ISO04_Contenidos/website_121_configuracin_de_usuarios__locales.html</a></li>
+        <li><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO04/es_ASIR_ISO04_Contenidos/website_122_operaciones_con_grupos_de_usuarios_locales.html" target="_blank">BIRTHLH. (2020, Octuber 19). Operaciones con grupos de usuarios locales. Retrieved from https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO04/es_ASIR_ISO04_Contenidos/website_122_operaciones_con_grupos_de_usuarios_locales.html</a></li>
+        <li><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO07/es_ASIR_ISO07_Contenidos/website_2_permisos_y_derechos.html" target="_blank">BIRTHLH. (2020, Octuber 19). Permisos y Derechos. Retrieved from https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO07/es_ASIR_ISO07_Contenidos/website_2_permisos_y_derechos.html</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+@endsection

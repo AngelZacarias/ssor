@@ -27,5 +27,6 @@ Route.on('/activity4').render('activity4').as('activity4');
 Route.on('/activity5').render('activity5').as('activity5');
 Route.on('/activity6').render('activity6').as('activity6');
 Route.get('/activity7', 'CommentController.getComments').as('activity7');
+Route.on('/activity8').render('activity8').as('activity8');
 Route.post('/comment', 'CommentController.save').as('registerCommentAct7');
 
