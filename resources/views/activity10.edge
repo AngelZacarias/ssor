@@ -1,0 +1,56 @@
+@layout('layouts.master')
+@section('content')
+<div
+  class="justify-content-end align-items-end align-content-end"
+  style="height: 100%;"
+>
+  <h1>Actividad 10</h1>
+  <h2>Administración de Redes y sus Utilidades</h2>
+  <br>
+  <h4>Escritorio Remoto</h4>
+  <p>El escritorio remoto o Remote Desktop es el termino para hacer referencia al “control remoto desde el escritorio”. Así, por medio de la conexión a escritorio remoto es posible conectar el propio ordenador (cliente) con otro ordenador (servidor). Siempre y cuando se den las condiciones técnicas necesarias, el usuario podrá crear dicha conexión a escritorio remoto desde cualquier lugar.</p>
+  <h4>¿Que es RDP?</h4>
+  <p>RDP son las siglas para Remote Desktop Protocol, o Protocolo de Escritorio Remoto. es un protocolo propietario desarrollado por Microsoft que permite la comunicación en la ejecución de una aplicación entre una terminal (mostrando la información procesada que recibe del servidor) y un servidor Windows (recibiendo la información dada por el usuario en el terminal mediante el ratón o el teclado).</p>
+  <p>Este protocolo esta basado en y es una extension de la familia estandar T-120. Dentro de lo que implica su arquitectura, esta permite permite que los datos de una aplicación se entreguen en tiempo real a varias partes sin tener que enviar los mismos datos a cada sesión individualmente.</p>
+  <p>Asi, RDP es el protocolo utilizado por Microsotf para su herramienta de conexion por Escritorio Remoto.</p>
+  <h4>Sesiones</h4>
+  <p>Para realizar una conexion por medio de escritorio remoto una de las condiciones que se deberan cumplir es, tener una cuenta en el grupo de permisos para conexiones por medio de escritorio remoto en la maquina a conectar (server).</p>
+  <p>Al realizar una conexión, esta generara una sesion en el servidor para este usuario. Misma que puede interactuar con el sistema y otras sesiones.</p>
+  <p>Existen un conjunto de herramientas que le permiten monitorizar las sesiones activas o desconectadas para interactuar con ellas, asi como conocer la carga o el conjunto de los usuarios conectados en un servidor host de sesión o host de virtualización de Escritorio remoto.</p>
+  <p>Por ejemplo, la sección Conexiones, accesible a través de las propiedades de una colección de sesiones, permite ver de un vistazo la lista de usuarios conectados a los servidores host de sesión de la colección. Esta vista centralizada nos permite ver todos los usuarios conectados, sin importar el servidor en que se encuentren.</p>
+  <h4>CAL</h4>
+  <p>CAL son las siglas para Client Access License, o Licencias de Acceso de Cliente. Es un software comercial que permite a los clientes el uso de servicios en un servidor.</p>
+  <p>Estas licencias, en ptras palabras son las licencias que se deben de adquirir para permitir a una cantidad de usuarios el uso de algunos servicios (por ejemplo conexiones por Escritorio Remoto).</p>
+  <p>Una CAL no es un producto de software; más bien, es una licencia que le da al usuario el derecho a acceder al servicio del servidor.</p>
+  <p>Por ejemplo, una instancia estandar de Windows Server 2016 con 10 CAL, permitira el acceso hasta a 10 clientes accesar al servidor.</p>
+  <div class="simple-cointainer">
+    <h4>Video de implementación</h4>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/uL8Ab005vEQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br>
+  </div>
+  <h4>Opciones Alternas</h4>
+  <p>Si bien, el acceso por escritorio remoto es una herramienta unica, puede llegar a tener limitantes en el numero de conexiones de los clientes. Por ello existen softwares diferentes que ofrecen el mismo servicio con diferentes opciones. algunos ejemplos son:</p>
+  <ul>
+    <li><a href="https://tsplus.mx/index.php" target="_blank">TSPlus</a></li>
+    <li><a href="https://www.teamviewer.com/es-mx/" target="_blank">TeamViewer</a></li>
+    <li><a href="https://www.logmein.com/es" target="_blank">LogMeIn</a></li>
+  </ul>
+  <h4>Conclusiones</h4>
+  <p>Creo que El escritorio remoto es una gran prestacion y un servicio demasiado bueno y creo que de los mas positivos para servidores Windows Server.</p>
+  <p>Segun sé, los precios son la unica desventaja si se desea hacer de forma nativa, pero en general me parece una buena opción.</p>
+  <p>Las sesiones en este tipo de equipos creo que reflejan bastante bien el termino de multiusuario que ya habia escuchado desde siempre al hablar de un sistema operativo, mas en realidad ese concepto de "Mas de un usuario trabajando" que siempre se me mencionaba no estaba apegado a algun caso completamente que pudiese asociar con hasta el momento en el que personalmente comence a utilizar RDP.</p>
+  <h4>Referencias</h4>
+  <div class="flex-parent">
+    <div class="flex-child long-and-truncated">
+      <ul>
+        <li><a href="https://www.ediciones-eni.com/open/mediabook.aspx?idR=1811aceb2c7eea0a4074bdf1525d3dea" target="_blank">ENI. (2020, November 03). Servicios RDS de Windows Server 2016 - Remote Desktop Services: Instalación y administración. Retrieved from https://www.ediciones-eni.com/open/mediabook.aspx?idR=1811aceb2c7eea0a4074bdf1525d3dea</a></li>
+        <li><a href="https://www.ionos.mx/digitalguide/servidores/know-how/escritorio-remoto-asi-funciona/" target="_blank">IONOS. (2020, November 03). Escritorio Remoto: Asi Funciona. Retrieved from https://www.ionos.mx/digitalguide/servidores/know-how/escritorio-remoto-asi-funciona/</a></li>
+        <li><a href="https://www.microsoft.com/es-xl/licensing/product-licensing/client-access-license" target="_blank">Microsoft. (2020, November 03). Client Access Licenses. Retrieved from https://www.microsoft.com/es-xl/licensing/product-licensing/client-access-license</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol" target="_blank">Microsoft. (2020, November 03). Understanding the Remote Desktop Protocol (RDP). Retrieved from https://docs.microsoft.com/en-us/troubleshoot/windows-server/remote/understanding-remote-desktop-protocol</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Client_access_license" target="_blank">Wikipedia. (2020, November 03). Client access license. Retrieved from https://en.wikipedia.org/wiki/Client_access_license</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/Remote_Desktop_Protocol" target="_blank">Wikipedia. (2020, November 03). Remote Desktop Protocol. Retrieved from https://es.wikipedia.org/wiki/Remote_Desktop_Protocol</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+@endsection
