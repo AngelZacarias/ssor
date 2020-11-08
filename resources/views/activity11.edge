@@ -1,0 +1,89 @@
+@layout('layouts.master')
+@section('content')
+<div
+  class="justify-content-end align-items-end align-content-end"
+  style="height: 100%;"
+>
+  <h1>Actividad 11</h1>
+  <h3>Inicializacion Windows Server</h3>
+  <p>La secuencia de arranque de Windows utiliza el sistema de almacenamiento y configuración de arranque denominado BCD store (Boot Configuration Data).  Este registro se encuentra situado en el directorio \boot\BCD de la partición donde se instala el sistema de forma oculta y en binario. Es un repositorio de datos y parámetros necesarios para gestionar el arranque del sistema. El fichero  Bootmgr.exe es el encargado del manejador y cargador de arranque (boot loader).</p>
+  <p>La secuencia de arranque es:</p>
+  <ol>
+    <li>La BIOS carga el MBR en memoria el cual analiza la tabla de particiones y carga en memoria el sector de arranque de la partición marcada como activa en la que se encuentra el S.O</li>
+    <li>El sector de arranque localiza el bootmgr y se ejecuta, busca el directorio \boot que contiene los programas que inician el sistema.</li>
+    <li>Dentro del directorio se ejecuta el BCD apareciendo un menú en que se selecciona el sistema que se desea arrancar comenzando la carga del núcleo de sistema. </li>
+  </ol>
+  <h4>¿Como configurar?</h4>
+  <p>Para poder configurar el BDC de Windows  se dispone de la herramienta BCDEdit permite manipular las opciones de arranque del sistema. Para utilizarlo debemos abrir una consola ejecutando el comando cmd y ejecutar el programa BCDEdit.exe ejecutando en la línea de comandos de la consola la orden bcdedit, aparecerá un listado con todas las opciones del menú de arranque con sus correspondientes parámetros de configuración.</p>
+  <h4>Aspector importantes</h4>
+  <ul>
+    <li>El entorno de arranque es compatible con BIOS y EUFI los modelos de firmware.</li>
+    <li>Al encender un equipo el ordenador funciona con el software de inicio que reside en firmware, llamado boot loader que localiza e inicia el núcleo del S.O. y prepara el acceso a los dispositivos de hardware antes de que el ordenador esté listo para iniciar la ejecución de aplicaciones.</li>
+    <li>El gestor de arranque suele ser independiente del S.O. Los administradores del sistema suelen cambiar la configuración de arranque. Si sera editado es recomendable hacer una copia de seguridad de la configuración de arranque actual mediante el uso de la bcdedit/exportación de salvar BCD.</li>
+    <li>Los datos de configuración de arranque (BCD) sustituyen a la anterior (boot.ini).</li>
+  </ul>
+  <h4>Resumen</h4>
+  <p>Los pasos que se siguen en la inicializacion se pueden resumir en:</p>
+  <ol>
+    <li>Se inicia la BIOS</li>
+    <li>Se carga el MBR del disco</li>
+    <li>Carga el sector de arranque</li>
+    <li>Carga el Windows Boot Manager</li>
+    <li>Lee desde el BCD, (Boot Configuration Data)</li>
+    <li>Busca archivos de hibernación</li>
+    <li>Inicia el programa Winload.exe, (carga el kernel del Sistema operativo)</li>
+    <li>Inicia el programa ntoskrnl.exe, (imagen del kernel de Windows)</li>
+    <li>Inicia el programa smss.exe, (administrador de secciones)</li>
+    <li>Inicia el programa winlogon (valida la identificación del usuario en el sistema)</li>
+    <li>Finaliza iniciando los servicios y la interface de login.</li>
+  </ol>
+  <h3>Descripcion de Fallos y Herramientas</h3>
+  <div class="simple-cointainer">
+    <h4>Event Viewer</h4>
+    <p>El Event Viewer o Visor de eventos de Microsoft Windows Server es una herramienta de supervisión que muestra un registro de eventos que se puede utilizar para solucionar problemas en un sistema basado en Windows.</p>
+    <p>Este muestra información sobre eventos de aplicación, relacionados con la seguridad, del sistema y de configuración. Puede ser abierto desde elmenú Herramientas administrativas en la categoría Sistema y seguridad del Panel de control.</p>
+    <p>Dentro de el, el registro de eventos muestra información como la fuente o el software o servicio que generó el evento de registro, el ID del evento y el nivel o la gravedad del evento.</p>
+    <p>Un administrador puede crear filtros y vistas personalizadas para mostrar eventos particulares. Puede ademas ser convinado con software como el Windows Event Collector y Windows Remote Management services.</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/qRqzYpH7T9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br>
+    <h4>Incio en modo seguro</h4>
+    <p>El modo seguro de Windows es un modo de incio a prueba de fallos, en el cual se inicia sólo los componentes estrictamente necesarios para funcionar. Sólo utiliza los drivers de vídeo genéricos, por lo que se ve en baja resolución, y el resto de drivers de tu hardware ni siquiera los carga. Tampoco arranca ninguna aplicación de terceros, ni siquiera las configuradas para iniciarse junto al ordenador, y sólo ejecuta los servicios de Windows esenciales.</p>
+    <h3>¿Qué se puede hacer en modo seguro?</h3>
+    <ul>
+      <li>Escanear en busca de malware</li>
+      <li>Comprobar que sea un error de software</li>
+      <li>Desinstalar software</li>
+      <li>Actualizar drivers de hardware</li>
+      <li>Restaurar el sistema a un punto anterior</li>
+    </ul>
+    <h3>Uso del modo seguro en windows Server 2016</h3>
+    <p>A continuación se muestra una serie de imagenes con su descripción de los pasos a seguir en Windows Server 2016</p>
+    <div clas="container">
+      <a class="example-image-link" href="files/activity11/activity11_1.png" data-lightbox="example-set" data-title="Paso 1:Iniciamos windows por medio de un boot"><img class="example-image" src="files/activity11/activity11_1.png" alt="Iniciamos windows por medio de un boot"/></a>
+      <a class="example-image-link" href="files/activity11/activity11_2.png" data-lightbox="example-set" data-title="Paso 2:Hacemos click en siguiente"><img class="example-image" src="files/activity11/activity11_2.png" alt="Hacemos click en siguiente"/></a>
+      <a class="example-image-link" href="files/activity11/activity11_3.png" data-lightbox="example-set" data-title="Paso 3:Hacemos click en Reparar el equipo"><img class="example-image" src="files/activity11/activity11_3.png" alt="Hacemos click en Reparar el equipo"/></a>
+      <a class="example-image-link" href="files/activity11/activity11_4.png" data-lightbox="example-set" data-title="Paso 4:Hacemos click en Solucionar Problemas"><img class="example-image" src="files/activity11/activity11_4.png" alt="Hacemos click en Solucionar Problemas"/></a>
+      <a class="example-image-link" href="files/activity11/activity11_5.png" data-lightbox="example-set" data-title="Paso 5:Hacemos click en Símbolo del sistema"><img class="example-image" src="files/activity11/activity11_5.png" alt="Hacemos click en Símbolo del sistema"/></a>
+      <a class="example-image-link" href="files/activity11/activity11_6.png" data-lightbox="example-set" data-title="Paso 6:Escribimos el comando set {bootmgr} displaybootmenu yes para editar nuestro bootmgr"><img class="example-image" src="files/activity11/activity11_6.png" alt="Escribimos el comando set {bootmgr} displaybootmenu yes para editar nuestro bootmgr"/></a>
+      <a class="example-image-link" href="files/activity11/activity11_7.png" data-lightbox="example-set" data-title="Paso 7:Escribimos set {bootmgr} timeout 15 para darle un tiempo de espera de 15 segundos"><img class="example-image" src="files/activity11/activity11_7.png" alt="Escribimos set {bootmgr} timeout 15 para darle un tiempo de espera de 15 segundos"/></a>
+      <a class="example-image-link" href="files/activity11/activity11_8.png" data-lightbox="example-set" data-title="Paso 8:Cerramos la terminal y hacemos click en apagar equipo"><img class="example-image" src="files/activity11/activity11_8.png" alt="Cerramos la terminal y hacemos click en apagar equipo"/></a>
+      <a class="example-image-link" href="files/activity11/activity11_9.png" data-lightbox="example-set" data-title="Paso 9:Iniciamos Windows Server de forma normal y seleccionamos nuestro S.O."><img class="example-image" src="files/activity11/activity11_9.png" alt="Iniciamos Windows Server de forma normal y seleccionamos nuestro S.O."/></a>
+      <a class="example-image-link" href="files/activity11/activity11_10.png" data-lightbox="example-set" data-title="Paso 10:Seleccionamos la opcion Modo Seguro y Listo!"><img class="example-image" src="files/activity11/activity11_10.png" alt="Seleccionamos la opcion Modo Seguro y Listo!"/></a>
+      <br><br><p><em>**Haz click en una imagen para verla en tamaño completo y leer su título</em></p>
+    </div>
+  </div>
+
+  <h4>Referencias</h4>
+  <div class="flex-parent">
+    <div class="flex-child long-and-truncated">
+      <ul>
+        <li><a href="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO02/es_ASIR_ISO02_Contenidos/website_31_la_secuencia_de_arranque_de_windows_y_windows_server.html" target="_blank">BIRTLH. (2020, November 08). La secuencia de arranque de Windows y Windows Server. Retrieved from https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO02/es_ASIR_ISO02_Contenidos/website_31_la_secuencia_de_arranque_de_windows_y_windows_server.html</a></li>
+        <li><a href="https://searchwindowsserver.techtarget.com/definition/Microsoft-Windows-Server-Event-Viewer" target="_blank">M., R. (2020, November 08). What is Microsoft Windows Server Event Viewer? Retrieved from https://searchwindowsserver.techtarget.com/definition/Microsoft-Windows-Server-Event-Viewer</a></li>
+        <li><a href="https://www.youtube.com/watch?v=L9W4zDSQprc&ab_channel=RobertMcMillen" target="_blank">R., M. (2020, November 08). Overview of Event Viewer in Windows Server 2016. Retrieved from https://www.youtube.com/watch?v=L9W4zDSQprc&ab_channel=RobertMcMillen</a></li>
+        <li><a href="https://www.youtube.com/watch?v=m0GGlwTSZuc&ab_channel=solvetic.com" target="_blank">Solvetic. (2020, November 08). Cómo iniciar modo seguro Windows Server 2019 y Windows Server 2016. Retrieved from https://www.youtube.com/watch?v=m0GGlwTSZuc&ab_channel=solvetic.com</a></li>
+        <li><a href="https://www.xataka.com/basics/modo-seguro-windows-10-que-que-puedes-hacer-como-iniciarlo" target="_blank">Xataka. (2020, November 08). Modo Seguro de Windows 10: qué es, qué puedes hacer con él y cómo iniciarlo. Retrieved from https://www.xataka.com/basics/modo-seguro-windows-10-que-que-puedes-hacer-como-iniciarlo</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+@endsection
