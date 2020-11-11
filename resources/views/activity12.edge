@@ -1,0 +1,135 @@
+@layout('layouts.master')
+@section('content')
+<div
+  class="justify-content-end align-items-end align-content-end"
+  style="height: 100%;"
+>
+  <h1>Actividad 12</h1>
+  <h4>Características  generales  de  los  Sistemas Operativos de Red</h4>
+  <p>Un sistema operativo de red es un tipo de software que se encarga de posibilitar el funcionamiento de una red de ordenadores. Es el equivalente de un sistema operativo convencional para el manejo de una red.</p>
+  <p>Dentro de los labores mas especificas que hace, es el administrar el acceso a los recursos dentro de la red por sus clientes (otros dispositivos).</p>
+  <p>Las características comunes a todos ellos son:</p>
+  <ul>
+    <li>Conecta recursos, ya sea hardware (impresoras, perifericos, telefonos) o software (accesos a base de datos, ftp, cuentas)</li>
+    <li>Puede realizar una gestion centralizada de usuarios</li>
+    <li>Tiene control de acceso a los recursos y a los datos con validaciones de accesos, asi como politicas de seguridad.</li>
+    <li>Monitorea la actividad en la red</li>
+    <li>Gestiona la red</li>
+    <li>Coordina funciones de red</li>
+    <li>Puede contar con interfaces para simplificar todo lo anterior <em>(aunque no siempre)</em></li>
+    <li>Tambien puede ser usado y compartido para los usuarios de red</li>
+  </ul>
+  <p>Asi, el servidor puede también considerarse como un recurso mas en la red.</p>
+  <h3>Tipos de Sistemas Operativos de Red</h3>
+  <p>Si hacemos una clasificación de Sistemas basados en su arquitectura y en función la conexión que se dé entre las partes, existen:</p>
+  <ul>
+    <li><strong>Uso en routers:</strong> Se incrustan en servidores de seguridad de hardware o en enrutadores.</li>
+    <li><strong>Peer-to-peer:</strong> Sus usuarios comparten los recursos y archivos. Se requiere de un servidor y los requisitos de hardware son bajos.</li>
+    <li><strong>Cliente-Servidor:</strong> arquitectura que permite la centralización de funciones y aplicaciones en uno o más servidores dedicados, pudiendo, varios clientes, tener acceso a diferentes recursos. Son muy estables, seguros y suele accederse a ellos de forma remota.</li>
+  </ul>
+  <h3>Componentes de un Sistema Operativo de Red</h3>
+  <p>El ambiente en el que trabaja un SOR se compone de:</p>
+  <ul>
+    <li><strong>Servidores:</strong> Que son los equipos que tienen el SOR instalado.</li>
+    <li><strong>Clientes:</strong> Son otros dispositivos que tienen un SO monopuesto y que accesan a los demas recursos de la red</li>
+    <li><strong>Dominios:</strong> Es un espacio en el que se gestionan equipos, recursos y servicios de forma centralizada.</li>
+  </ul>
+  <h4>Los SOR mas utilizados y sus caracteristicas</h4>
+  <h3>LANtastic, Artisoft</h3>
+  <ul>
+    <li>Es de tipo <strong>peer-to-peer</strong>.</li>
+    <li>Funciona en <strong>Windows, DOS y OS/2</strong>.</li>
+    <li>Ofrece una <strong>configuración MUY sencilla</strong>, como también lo es su mantenimiento, situándose como una de las opciones más adecuadas para quienes no son expertos y deben hacer uso de él (por ejemplo, profesores en institutos).</li>
+    <li>Permite el <strong>acceso a los equipos desde los clientes</strong>.</li>
+    <li>Este, además, es <strong>multiplataforma</strong>.</li>
+    <li>Permite la restricción de características según fecha.</li>
+    <li>Puede ser usado por más de <strong>500 usuarios</strong>.</li>
+    <li>Ofrece capacidad para <strong>controlar hasta 32 ordenadores a la vez</strong>.</li>
+    <li>Su nivel de seguridad peer-too-peer es muy alto.</li>
+    <li>Su precio es muy reducido.</li>
+  </ul>
+  <h3>LAN Manager, Microsoft</h3>
+  <ul>
+    <li>Se ejecuta en OS/2 conectando <strong>UNIX, DOS y OS-2</strong>.</li>
+    <li>Muy adecuado para <strong>macrocomputadoras</strong>.</li>
+    <li>Agrupa <strong>servidores de archivos de dominio</strong>.</li>
+    <li>Cuenta con diversos servidores de archivos.</li>
+    <li>También con <strong>servidores dedicados y no dedicados</strong>.</li>
+    <li>Es <strong>lento</strong>.</li>
+    <li>Su nivel de seguridad es bajo.</li>
+  </ul>
+  <h3>Microsoft Windows Server</h3>
+  <ul>
+    <li>Se desarrolla en asembler, C y C++.</li>
+    <li>Se trata de un<strong> sistema multiproceso</strong>.</li>
+    <li>De <strong>uso y administración muy sencillos</strong>.</li>
+    <li>La curva de aprendizaje es realmente esperanzadora para su uso por personas no profesionales.</li>
+    <li>Tiene soporte para ASP.NET, el framework por excelencia en desarrollo web.</li>
+    <li>El <strong>precio</strong> de la licencia es<strong> elevado</strong>.</li>
+    <li><strong>El soporte es inmejorable</strong>.</li>
+    <li>Requiere reinicio tras cada update.</li>
+    <li><strong>Consume bastantes</strong> recursos.</li>
+    <li>Permite el <strong>desarrollo de aplicaciones en un tiempo muy reducido</strong>.</li>
+    <li>Su seguridad se sitúa entre las más bajas, algo lógico si consideramos su uso comercial.</li>
+  </ul>
+  <h3>Linux para servidores</h3>
+  <ul>
+    <li>Un <strong>desarrollo open source</strong>, de manera que resulta idealpara quien tenga conocimientos en desarrollo, pues se puede modificsr a voluntad.</li>
+    <li>No es un único SO sino <strong>un conjunto</strong> de ellos, con distribuciones ampliamente utilizadas para el tema que hoy nos ocupa como SUSE Linux, Debian, Ubuntu o CentOS.</li>
+    <li>Destaca por su <strong>estabilidad</strong>.</li>
+    <li>También es <strong>muy rápido</strong>.</li>
+    <li>Ahora es mucho más sencillo de usar, contando con programas de configuración.</li>
+    <li><strong>No ofrece soporte</strong> para particiones de disco duro de <strong>Windows</strong> ni para los programas que corran bajo este.</li>
+  </ul>
+  <h3>Novell´s NetWare</h3>
+  <ul>
+    <li>Se diseñó para usarse <strong>a gran escala</strong>, en enormes corporaciones.</li>
+    <li>Funciona en <strong>DOS y MAC</strong>.</li>
+    <li>Destaca por su <strong>fiabilidad en cuanto a los accesos</strong> a la red y a los propios recursos.</li>
+    <li>Se considera uno de los mejores administradores de red a gran escala.</li>
+    <li>Resulta<strong> independiente del hardware</strong>.</li>
+    <li>Soporta <strong>softwares mediante módulos cargables</strong>.</li>
+    <li>Su instalación y administración son complejas.</li>
+    <li>Tiene una <strong>plataforma muy sencilla</strong>, puede que demasiado en algunos casos.</li>
+    <li><strong>Requiere software adicional de Novell</strong> para hacer uso de sus servicios FTP y HTTP.</li>
+    <li>Resulta caro si se quiere usar en redes pequeñas.</li>
+  </ul>
+  <h4>CentOS - Distribución de Linux Server</h4>
+  <p>Como elección de Sistema Operativo Linux de Red para instalar en la siguiente entrada (tarea) elegi CentOS. a continuación un poco a cerca de este sistema operativo.</p>
+  <p>La distribución de CentOS Linux es una plataforma estable, predecible, administrable y reproducible derivada de las fuentes de Red Hat Enterprise Linux (RHEL).</p>
+  <p>Desde marzo de 2004, CentOS Linux ha sido una distribución respaldada por la comunidad derivada de fuentes proporcionadas gratuitamente al público por Red Hat. Por lo que es funcionalmente compatible con RHEL.</p>
+  <p>Sin embargo, CentOS a diferencia de RHEL es gratuito y se puede restribuir gratuitamente tambien.</p>
+  <p>CentOS Linux está desarrollado por un pequeño pero creciente equipo de desarrolladores centrales. A su vez, los desarrolladores principales cuentan con el apoyo de una comunidad de usuarios activa que incluye administradores de sistemas, administradores de red, gerentes, colaboradores principales de Linux y entusiastas de Linux de todo el mundo.</p>
+  <p>Actualmente el proposito y lo que busca CentOS es expandirse creando los recursos necesarios para que otras comunidades se unan y puedan construir sobre la plataforma CentOS Linux</p>
+  <p>El Proyecto CentOS se basa en la estructura de la Fundación Apache, con una junta directiva que supervisa varios Grupos de Interés Especial semiautónomos o "SIGs". Estos grupos se centran en proporcionar varias mejoras, complementos o reemplazos para la funcionalidad central de CentOS Linux. Algunos ejemplos notables de SIGs son:</p>
+  <ul>
+    <li><a href="https://wiki.centos.org/SpecialInterestGroup/Core" target="_blank"><strong>Core</strong></a>: Building y release de la plataforma central de Linux CentOS.</li>
+    <li><a href="https://wiki.centos.org/Manuals/ReleaseNotes/Xen4-01" target="_blank"><strong>Xen4CentOS</strong></a>: proporciona compatibilidad con Xen4 para CentOS 6.</li>
+    <li><a href="https://wiki.centos.org/ArtWork" target="_blank"><strong>Diseño CentOS</strong></a>: mejora la experiencia del usuario con ilustraciones de alta calidad.</li>
+  </ul>
+  <h3>Requerimientos de instalación</h3>
+  <p>Los requerimientos, como en muchos sistemas operativos de Linux son realmente minimos incluso para la version 8 de CenOS</p>
+  <p>Para información detallada consulta <a href="https://wiki.centos.org/About/Product" target="_blank">haciendo click aquí</a>.</p>
+  <h3>Aún con dudas...</h3>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/44tARUc30-8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br>
+  <h4>Conclusiones</h4>
+  <p>Me parecio un poco confusa que la actividad de esta tarea fuera abordada casi hasta el final ya que incluye una investigacion rapida de que es un sistema operativo en red y las caracteristicas y comparaciones entre algunos.</p>
+  <p>También he de decir que hacer esto en practicamente el final del curso, me gusto porque pude tomar un vistazo hacia atras y en realidad ahora ya sé todo esto que investigue, siendo que al inicio tal vez algunos conceptos o ideas podrían parecerme dificiles de entender.</p>
+  <p>Estoy bastante entusiasmado por empezar a utilizar mi maquina virtual de CentOS ya que desde hace algunos meses u años habia querido comenzar a utilizar Linux como SO regular. Asi que creo que eso es todo, zaz.</p>
+  <p>Si deseas seguir los videos de la instalación de CentOS asi como de la configuración de Samba como controlador de dominio, <a href="notfound">puedes hacer click aquí</a>.</p>
+  <p>Si deseas descargar CentOS desde su sitio oficial <a href="https://www.centos.org/" target="_blank">puedes hacer click aquí</a>.</p>
+  <h4>Referencias</h4>
+  <div class="flex-parent">
+    <div class="flex-child long-and-truncated">
+      <ul>
+        <li><a href="https://www.centos.org/about/" target="_blank">CentOS Organization. (2020, November 10). About CentOS. Retrieved from https://www.centos.org/about/</a></li>
+        <li><a href="https://wiki.centos.org/About/Product" target="_blank">CentOs Organization. (2020, November 10). CentOS Product Specifications. Retrieved from https://wiki.centos.org/About/Product</a></li>
+        <li><a href="https://www.centos.org/" target="_blank">CentOS Organization. (2020, November 10). The CentOS project. Retrieved from https://www.centos.org/</a></li>
+        <li><a href="https://internetpasoapaso.com/sistema-operativo-de-red/" target="_blank">Internet Paso a Paso. (2020, November 10). Sistema operativo de red: ¿Qué es, para qué sirve y cuáles son los más conocidos? Retrieved from https://internetpasoapaso.com/sistema-operativo-de-red/</a></li>
+        <li><a href="https://www.youtube.com/watch?v=44tARUc30-8&ab_channel=ProTechShow" target="_blank">ProTechShow. (2020, November 10). Red Hat, CentOS & Fedora: Which Is Best for You? Retrieved from https://www.youtube.com/watch?v=44tARUc30-8&ab_channel=ProTechShow</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+@endsection
