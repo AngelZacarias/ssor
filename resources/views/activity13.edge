@@ -1,0 +1,46 @@
+@layout('layouts.master')
+@section('content')
+<div
+  class="justify-content-end align-items-end align-content-end"
+  style="height: 100%;"
+>
+  <h1>Actividad 13</h1>
+  <h4>Servidores Linux</h4>
+  <p>En esta entrada hablaremos un poco de las distribuciones Linux para Servidores, en especifico CentOS 8 y las limitaciones que puede traer consigo en redes mixtas al momento de estar trabajando al compartir recursos entre equipos y sobre todo, como resolverlo.</p>
+  <h4>Instalación de Linux CentOS</h4>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/dpkXE1svPOE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <h4>Vista rápida de Linux CentOS</h4>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/UKLJOj-9yLM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <h4>¿Gestión de redes mixtas?</h4>
+  <p>La comunicación entre equipos que estan dentro de una misma red muchas veces no es completamente posible de manera sencilla.</p>
+  <p>Existen multiples razones por las cuales esta tarea que en situaciones donde los equipos comparten caracteristicas son sencillas, lo vuelve un poco mas dificil en situaciones contrarias.</p>
+  <p>Un ejemplo que pudimos encontrar en este caso es si por ejemplo, intentas conectar un medio USB con sistema NTFS a Linux lo cual generará un error ya que Linux maneja el sistema de archivos EXT4 (o viceversa) con lo cual las posibilidades de conexión entre ambos se limitan.</p>
+  <h4>Samba</h4>
+  <p>Es un grupo de aplicaciones que facilitan la conectividad de Windows para Linux y Unix. Ofrece servicios de impresión y transferencia de archivos con funciones seguras, estables y de gran velocidad haciendo uso del protocolo SMB / CIFS y con Samba es posible integrar sin problema tanto servidores como entornos de escritorio Linux / Unix directamente en entornos de Active Directory.</p>
+  <h4>¿Cómo hace esto?</h4>
+  <p>Samba usa el protocolo CIFS (Common Internet File System - Sistema de archivos de Internet común) a traves de smb, el cual tiene como misión facilitar el acceso a los servicios de archivos e impresión dando como resultado acceder entre ambos sistemas sin errores.</p>
+  <p>Samba integra:</p>
+  <ul>
+    <li><strong>smbclient:</strong> este es un cliente SMB simple el cual posee una interfaz idéntica a FTP y gracias a smbclient podremos conectarnos a un recurso compartido SMB remoto, transferir archivos o enviar archivos a recursos compartidos de impresión remotos.</li>
+    <li><strong>nmblookup:</strong> es un cliente de servicio de nombres NetBIOS con el cual será posible buscar nombres de NetBIOS en la red.</li>
+    <li><strong>Samba Web Administration Tool (SWAT):</strong> es una utilidad que nos permite configurar Samba de forma remota a través de un navegador web.</li>
+  </ul>
+  <h4>Configurar Samba para redes mixtas</h4>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/N7oUqyuK-j8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <h4>Conclusiones</h4>
+  <p>Esta actividad creo que fue la mas complicada y larga que he tenido en esta materia.</p>
+  <p>Mas que nada, esto es debido a que en realidad no tenia una gran experiencia con Linux, y mucho menos con samba o instalacion de cualquier otra paqueteria de Linux.</p>
+  <p>Creo, debido a ello, que esta actividad en especifico fue demasiado gratificante de realizar y que si creo que me da las bases para seguir en Linux.</p>
+  <p>También opino que es en realidad conocimiento escencial el saber como manejarte cuando trabajas en Una red con equipos con sistemas operativos, arquitecturas y formatos de archivos diferentes.</p>
+  <h4>Referencias</h4>
+  <div class="flex-parent">
+    <div class="flex-child long-and-truncated">
+      <ul>
+        <li><a href="https://wiki.centos.org/About/Product" target="_blank">CentOs Organization. (2020, November 10). CentOS Product Specifications. Retrieved from https://wiki.centos.org/About/Product</a></li>
+        <li><a href="https://www.centos.org/" target="_blank">CentOS Organization. (2020, November 10). The CentOS project. Retrieved from https://www.centos.org/</a></li>
+        <li><a href="https://www.solvetic.com/tutoriales/article/7874-como-instalar-samba-en-centos-8/" target="_blank">Solvetic Sistemas. (2020, November 26). Como instalar Samba en CentOS 8. Retrieved from https://www.solvetic.com/tutoriales/article/7874-como-instalar-samba-en-centos-8/</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+@endsection

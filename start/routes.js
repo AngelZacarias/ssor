@@ -32,5 +32,6 @@ Route.on('/activity9').render('activity9').as('activity9');
 Route.on('/activity10').render('activity10').as('activity10');
 Route.on('/activity11').render('activity11').as('activity11');
 Route.on('/activity12').render('activity12').as('activity12');
+Route.on('/activity13').render('activity13').as('activity13');
 Route.post('/comment', 'CommentController.save').as('registerCommentAct7');
 
